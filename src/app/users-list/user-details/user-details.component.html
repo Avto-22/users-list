@@ -1,0 +1,19 @@
+<div class="main" *ngIf="user">
+    <div id="card">
+      <img class="center" [src]="user.imageUrl+'/'+user.id"/>
+      <h2 class="center">{{user.prefix+' '+user.name+' '+user.lastName}}</h2>
+      <p class="center job">{{user.title}}</p>
+      <p class="center job">{{'Job Area: '+user.jobArea}}</p>
+      <p class="center job">{{'Job Type: '+user.jobType}}</p>
+      <p class="center">{{'Ip Address: '+user.ip}}</p>
+      <p class="center">{{'E-Mail: '+user.email}}</p>
+      <p class="center">{{'Company: '+user.company.name+' '+user.company.suffix}}</p>
+      <p class="center title">Address</p>
+      <p class="center">{{'City: '+user.address.city}}</p>
+      <p class="center">{{'Country: '+user.address.country}}</p>
+      <p class="center">{{'State: '+user.address.state}}</p>
+      <p class="center">{{'Street Address: '+user.address.streetAddress}}</p>
+      <p class="center">{{'ZIP: '+user.address.zipCode}}</p>
+    </div>
+    <app-friends class="top" [userId]="user.id"></app-friends>
+</div>
