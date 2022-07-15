@@ -14,7 +14,7 @@ export class UserDetailsFnService {
   goToDetails(id: number, activeIndex?:number) {
     this.router.navigate([`user/${id}`]);
     if(activeIndex>=0){ 
-      let arr:HistoryUser = JSON.parse(localStorage.getItem('users')).map(x => {
+      let arr:HistoryUser[] = JSON.parse(localStorage.getItem('users')).map(x => {
         return {
           ...x,
           isActive: false
